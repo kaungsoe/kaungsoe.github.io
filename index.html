@@ -54,35 +54,54 @@
     <style>
         @import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
 
+        /* Style for the body */
+        body {
+            display: flex;
+            flex-direction: column; /* Arrange children vertically */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-family: 'Covered By Your Grace', cursive;
+            color: white;
+            background: #222;
+        }
+
+        /* Style for the label */
+        #label {
+            font-size: 40px;
+            color: white;
+            margin-bottom: 20px; /* Add some space below the label */
+        }
+
+        /* Container for the countdown */
         #timer {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Make the height of the timer container full viewport height */
+            flex-direction: row; /* Arrange elements in a row */
+            gap: 10px; /* Add some space between elements */
         }
 
+        /* Styling for the countdown elements */
         #days {
             font-size: 200px;
             color: #db4844;
-            text-align: center;
         }
 
         #hours {
             font-size: 150px;
             color: #f07c22;
-            text-align: center;
         }
 
         #minutes {
             font-size: 100px;
             color: #f6da74;
-            text-align: center;
         }
 
         #seconds {
             font-size: 50px;
             color: #abcd58;
-            text-align: center;
         }
 
         div {
@@ -90,6 +109,7 @@
             line-height: 1;
             padding: 20px;
             font-size: 40px;
+            text-align: center;
         }
 
         span {
@@ -98,17 +118,12 @@
             color: white;
             text-align: center;
         }
-
-        body {
-            text-align: center;
-            font-family: 'Covered By Your Grace', cursive;
-            color: white;
-            background: #222;
-        }
     </style>
 </head>
 
 <body>
+    <!-- Label and timer divs as separate sections -->
+    <div id="label">Arriving In</div>
     <div id="timer">
         <div id="days"></div>
         <div id="hours"></div>
